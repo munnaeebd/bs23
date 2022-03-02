@@ -80,7 +80,7 @@ istioctl install --set profile=demo -y
 
 ## Adding a namespace label to inject envoy proxy 
 kubectl label namespace default istio-injection=enabled
-
+```
 
 
 
