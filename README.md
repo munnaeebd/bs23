@@ -68,9 +68,18 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 kubectl create -f https://projectcalico.docs.tigera.io/manifests/tigera-operator.yaml
 kubectl create -f https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml
-~~~
+```
 
+## Istio Installation
 
+```
+curl -L https://istio.io/downloadIstio | sh -
+cd istio-1.13.1
+export PATH=$PWD/bin:$PATH
+istioctl install --set profile=demo -y
+
+## Adding a namespace label to inject envoy proxy 
+kubectl label namespace default istio-injection=enabled
 
 
 
