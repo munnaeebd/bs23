@@ -3,7 +3,7 @@
 # Kubernetes Cluster Deployment
 
 ## Container runtime Installation
-~~~
+```
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
