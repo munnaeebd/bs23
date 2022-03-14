@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/munnaeebd/bs23.git'
+        git 'https://github.com/munnaeebd/bs23-task1.git'
       }
     }
     stage('Building image') {
